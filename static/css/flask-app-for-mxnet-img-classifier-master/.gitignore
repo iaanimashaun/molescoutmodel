@@ -1,7 +1,3 @@
-*.pyc
-*.params
-*.json
-synset.txt
-static/img_pool/*.jpg
-static/img_pool/*.png
-static/img_pool/*.jpeg
+version https://git-lfs.github.com/spec/v1
+oid sha256:365211fa6d10556ce71fc712e03f3fb471e7572d22444b22bf5c743d73425e4f
+size 100
