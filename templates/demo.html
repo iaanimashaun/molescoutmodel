@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CLEAN MARKUP = GOOD KARMA.
+      Hi source code lover,
+
+      you're a curious person and a fast learner ;)
+      Let's make something beautiful together. Contribute on Github:
+      https://github.com/webslides/webslides
+
+      Thanks!
+    -->
+
+    <!-- SEO -->
+    <title>MoleScout</title>
+    <meta name="description" content="WebSlides is the easiest way to make HTML presentations. Just essential features, clean code, and lovely CSS.">
+
+    <!-- URL CANONICAL -->
+    <!-- <link rel="canonical" href="http://your-url.com/permalink"> -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" type='text/css' media='all' href="{{ url_for('static', filename='css/webslides.css')}}">
+
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static', filename='css/svg-icons.css')}}">
+
+    <!-- SOCIAL CARDS (ADD YOUR INFO) -->
+
+    <!-- FACEBOOK -->
+    <meta property="og:url" content="http://your-url.com/permalink"> <!-- EDIT -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Make a Keynote presentation using HTML"> <!-- EDIT -->
+    <meta property="og:description" content="WebSlides is the easiest way to make HTML presentations. 120+ free slides ready to use."> <!-- EDIT -->
+    <meta property="og:updated_time" content="2017-01-04T17:32:14"> <!-- EDIT -->
+    <meta property="og:image" content="{{ url_for('static', filename='images/share-webslides.jpg')}}" > <!-- EDIT -->
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@webslides"> <!-- EDIT -->
+    <meta name="twitter:creator" content="@jlantunez"> <!-- EDIT -->
+    <meta name="twitter:title" content="Make a Keynote presentation using HTML"> <!-- EDIT -->
+    <meta name="twitter:description" content="WebSlides is the easiest way to make HTML presentations. 120+ free slides ready to use."> <!-- EDIT -->
+    <meta name="twitter:image" content="{{ url_for('static', filename='images/share-webslides.jpg')}}"> <!-- EDIT -->
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href="{{ url_for('static', filename='images/favicons/favicon.png')}}">
+    <link rel="shortcut icon" sizes="32x32" href=" {{ url_for('static', filename='images/favicons/favicon-32.png')}}">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="{{ url_for('static', filename='images/favicons/favicon-76.png')}}">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="{{ url_for('static', filename='images/favicons/favicon-120.png')}}">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="{{ url_for('static', filename='images/favicons/favicon-152.png')}}">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="{{ url_for('static', filename='images/favicons/favicon-180.png')}}">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="{{ url_for('static', filename='images/favicons/favicon-192.png')}}">
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+
+
+
+
+   
+
+  </head>
+
+
+
+  <body>
+    
+
+    <main role="main">
+      <article id="webslides">
+
+        <!-- Quick Guide
+          - Each parent <section> in the <article id="webslides"> element is an individual slide.
+          - Vertical sliding = <article id="webslides" class="vertical">
+          - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
+        -->
+
+        <section class="bg-apple aligncenter">
+       
+            <div>
+              <h2 class="">Are you worried about a mole?</h2>
+            </div>
+            <div>
+              <p>
+                <!-- <a href="#" class="button" title="Case study">Case study &rsaquo;</a> -->
+                <a href="#slide=2" class="button ghost zoomIn" title="Apple Website">LET'S SCOUT IT  &rsaquo;</a>
+              </p>
+            </div>
+          
+        <!-- .end .wrap -->
+      </section>
+
+        <section class="bg-apple" id="demo">
+            <div class="wrap">
+              
+              <div class="content-center slide-top">
+                <p>Upload a picture of a mole or skin lesion</p>
+                <p>Only extensions 'png', 'jpg', and 'jpeg' are supported.</p>
+                <form method='post' action='/predict' enctype=multipart/form-data>
+                  
+                  <input type=file name=file class="btn btn-info" placeholder="Enter the URL of the image" >  
+                  <p><input type=submit value=Upload class="btn btn-default"></p>
+                    
+                </form>
+              </div>
+        
+             
+        
+        <br><br>
+            
+              
+                  <div class="tab-pane fade content-center slide-bottom" id="by_url">
+                    <form action="/predicturl" method="post">
+                       <div class="form-group text-center">
+                         <p class="aligncenter">Or Enter Image URL and click submit</p>
+                         <!-- <label for="image_url">Image URL:</label> -->
+                         <input type="text" class="form-control" id="image_url" placeholder="Enter the URL of the image here" name="img_url">
+                       </div>
+                       <button type="submit" class="btn btn-default">Submit</button>
+                     </form>
+                     <p>You can try "<u><i>https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Melanoma.jpg/1600px-Melanoma.jpg</i></u>" and click "Submit". </p>
+                   </div>
+        
+            </div>
+          </section>
+
+        </section>
+
+        <section class="bg-apple aligncenter">
+          <!-- <span class="background-right-bottom" style="background-image:url('https://webslides.tv/static/images/tim-cook.png')"></span> -->
+          <div class="wrap">
+            <h1>One more thing...</h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+      
+        <section class="bg-apple aligncenter">
+          <h2 class="text-emoji zoomIn">😎</h2>
+          <h3><strong>Thank you!</strong></h2>
+            <h3><strong>And.....</strong></h2>
+          <!-- <p><a href="https://twitter.com/webslides" title="@WebSlides on Twitter">@WebSlides</a></p> -->
+        </section>
+      
+        
+        <section class="bg-apple aligncenter">
+             
+          
+            <p>
+              <!-- <a href="#" class="button" title="Case study">Case study &rsaquo;</a> -->
+              <h3>TO CONTACT ME  &nbsp; &nbsp; <a href="http://molescout.us-east-2.elasticbeanstalk.com" class="button ghost" title="Apple Website">CLICK HERE &rsaquo;</a></h3>
+              
+            </p>
+            
+            <p> <h3>FOR MORE ABOUT PROJECT &nbsp; &nbsp;  <a href="http://molescout.us-east-2.elasticbeanstalk.com/keynote" class="button ghost" title="Apple Website">CLICK HERE &rsaquo;</a></h3></p>
+          </div>
+        
+      <!-- .end .wrap -->
+      </section>
+        
+
+        
+
+
+                
+       
+        
+      </article>
+    </main>
+    <!--main-->
+
+    <!-- Required -->
+    <script src="{{ url_for('static', filename='js/webslides.js')}}"></script>
+
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="{{ url_for('static', filename='js/svg-icons.js')}}"></script>
+
+  </body>
+</html>
