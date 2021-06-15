@@ -1,13 +1,14 @@
-FROM python:alpine3.7
-COPY . /app
-WORKDIR /app
+FROM ubuntu 
 
-RUN apk --update add libxml2-dev libxslt-dev libffi-dev gcc musl-dev libgcc openssl-dev curl
-RUN apk add jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev
-RUN pip install Pillow
-RUN apk update
-RUN apk add make automake gcc g++ subversion python3-dev
-RUN pip install -U pip
+RUN apt-get update 
+
+RUN apt-get install python3-pip
+
 RUN pip install -r requirements.txt
-ENTRYPOINT [ "python" ]
-CMD [ "app.py" ]
+
+ADD app.py /
+WORKDIR /
+
+EXPOSE 5000
+
+CMD ["python3","app.py"]
