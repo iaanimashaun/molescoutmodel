@@ -107,7 +107,7 @@ def build_model():
 #skinmodel, device = build_model()
 #skinmodel.load_state_dict(torch.load('model_weightskin.pth'))
 model, device = build_model()
-model.load_state_dict(torch.load('model_weights2.pth', map_location=torch.device('cpu')))
+model.load_state_dict(torch.load('model_weights2.pth'))
 model.eval()                                             
 
 
